@@ -28,6 +28,7 @@
       width: 100px;
       @include md {
         width: 180px;
+        height: auto;
       }
     }
   }
@@ -38,6 +39,7 @@
     color: $color_gray;
     text-align: center;
     margin-top: 40px;
+    letter-spacing: 0.05em;
     @include md {
       margin-top: 50px;
       font-size: 12px;

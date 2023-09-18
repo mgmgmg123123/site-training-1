@@ -34,10 +34,16 @@
     }
   }
 }
+.globalNavWrap {
+  @include md {
+    margin-top: 10px;
+  }
+}
 .wrapper {
   padding: 41px 20px 50px;
   @include md {
     padding-inline: 40px;
+    margin-top: 22px;
   }
 }
 
@@ -49,7 +55,7 @@
     @include md {
       max-width: 1110px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%;
     }
   }
   .concept__imgWrap {
@@ -70,18 +76,26 @@
   }
   .concept__textWrap {
     @include font_sans;
-    padding: 27px 20px;
     @include md {
-      padding: 40px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    .concept__textInner {
+      padding: 27px 20px;
+      @include md {
+        padding: 40px;
+      }
     }
     .concept__subTitle {
       line-height: 1.2;
       font-weight: 600;
       font-size: 15px;
       color: $color_text;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.2em;
       @include md {
         font-size: 16px;
+        font-weight: 400;
       }
     }
     .concept__title {
@@ -89,39 +103,40 @@
       font-weight: 600;
       font-size: 26px;
       color: $color_primary;
-      margin-top: 20px;
+      margin-top: 18px;
+      letter-spacing: 0.1em;
       @include md {
         font-size: 32px;
         margin-top: 25px;
       }
     }
     .concept__text {
-      line-height: 1.2;
+      line-height: calc(27 / 15);
       font-weight: 400;
       font-size: 15px;
       color: $color_text;
-      margin-top: 30px;
-
+      margin-top: 19px;
+      letter-spacing: 0.1em;
       @include md {
         font-size: 16px;
-        margin-top: 40px;
+        margin-top: 30px;
       }
     }
   }
 }
 
 .blog {
-  margin-top: 50px;
+  margin-top: 37px;
   @include md {
-    margin-top: 100px;
+    margin-top: 97px;
   }
   .blog__subTitle {
     line-height: 1.2;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 12px;
     color: $color_text;
     text-align: center;
-
+    margin-top: 5px;
     @include md {
       font-size: 16px;
     }
@@ -133,13 +148,14 @@
     color: $color_primary;
     margin-top: 20px;
     text-align: center;
+
     @include md {
       font-size: 32px;
       margin-top: 25px;
     }
   }
   .blog__list {
-    margin-top: 30px;
+    margin-top: 27px;
     width: 100%;
     max-width: 500px;
     margin-inline: auto;
@@ -177,18 +193,21 @@
     font-weight: 600;
     font-size: 15px;
     color: $color_text;
+    margin-top: 10px;
     @include line_clamp(2);
     @include md {
-      margin-top: 25px;
+      margin-top: 16px;
     }
   }
   .blog__datetime {
+    display: block;
     line-height: calc(16 / 12);
     font-weight: 400;
     font-size: 12px;
     color: $color_text;
+    letter-spacing: 0.05em;
     @include md {
-      margin-top: 25px;
+      margin-top: 3px;
     }
   }
   .blog__linkWrap {
@@ -199,6 +218,7 @@
     @include line_clamp_single;
     @include md {
       max-width: 220px;
+      margin-top: 31px;
     }
     &:focus-visible {
       outline: 1px;
