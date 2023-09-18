@@ -2,13 +2,13 @@
 @use "../global" as *;
 
 .l-globalNav {
-  padding: 30px 20px;
+  padding: 28px 20px;
   .l-globalNav__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 50px;
   }
   .l-globalNav__link {
     line-height: 1.2;

@@ -35,7 +35,7 @@
   }
 }
 .wrapper {
-  padding: 0 20px 50px;
+  padding: 41px 20px 50px;
   @include md {
     padding-inline: 40px;
   }
@@ -70,7 +70,7 @@
   }
   .concept__textWrap {
     @include font_sans;
-    padding: 30px 20px;
+    padding: 27px 20px;
     @include md {
       padding: 40px;
     }
@@ -79,6 +79,7 @@
       font-weight: 600;
       font-size: 15px;
       color: $color_text;
+      letter-spacing: 0.1em;
       @include md {
         font-size: 16px;
       }
@@ -198,6 +199,9 @@
     @include line_clamp_single;
     @include md {
       max-width: 220px;
+    }
+    &:focus-visible {
+      outline: 1px;
     }
   }
 }
