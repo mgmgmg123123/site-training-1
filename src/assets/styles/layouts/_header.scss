@@ -5,6 +5,9 @@
   @include md {
     height: $header_height;
   }
+  .l-header__h1 {
+    @include visually_hidden;
+  }
   .l-header__inner {
     padding: 20px;
     height: 100%;
