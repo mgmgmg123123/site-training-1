@@ -3,6 +3,24 @@ import AppLayout from "../layouts/App.astro";
 import GlobalNav from "../layouts/GlobalNav.astro";
 import "@/assets/styles/pages/_index.scss";
 import Link from "../components/Link.astro";
+import ImgMainWebpPc from "@/assets/img/pc_main-visual.webp";
+import ImgMainPc from "@/assets/img/pc_main-visual.jpg";
+import ImgMainWebpSp from "@/assets/img/sp_main-visual.webp";
+import ImgMainSp from "@/assets/img/sp_main-visual.jpg";
+import Imgthumbnail01Webp from "@/assets/img/thumbnail01.webp";
+import Imgthumbnail01 from "@/assets/img/thumbnail01.jpg";
+import Imgthumbnail02Webp from "@/assets/img/thumbnail02.webp";
+import Imgthumbnail02 from "@/assets/img/thumbnail02.jpg";
+import Imgthumbnail03Webp from "@/assets/img/thumbnail03.webp";
+import Imgthumbnail03 from "@/assets/img/thumbnail03.jpg";
+import Imgthumbnail04Webp from "@/assets/img/thumbnail04.webp";
+import Imgthumbnail04 from "@/assets/img/thumbnail04.jpg";
+import Imgthumbnail05Webp from "@/assets/img/thumbnail05.webp";
+import Imgthumbnail05 from "@/assets/img/thumbnail05.jpg";
+import Imgthumbnail06Webp from "@/assets/img/thumbnail06.webp";
+import Imgthumbnail06 from "@/assets/img/thumbnail06.jpg";
+import ImgConceptWebp from "/src/assets/img/concept.webp";
+import ImgConcept from "/src/assets/img/concept.jpg";
 
 const meta = {
   title: "TOP | SkyCoffee",
@@ -11,7 +29,7 @@ const meta = {
   "og:title": "TOP | SkyCoffee",
   "og:description":
     "SkyCoffeeのホームページです。心静かにコーヒーを。立ち止まって、空の青さを眺めて、一息つきましょう。",
-  "og:image": "/src/assets/img/pc_main-visual.jpg",
+  "og:image": ImgMainPc.src,
 };
 
 const nav = [
@@ -36,23 +54,17 @@ const nav = [
     <div class="kv__background">
       <picture>
         <source
-          srcset="/src/assets/img/pc_main-visual.webp"
+          srcset={ImgMainWebpPc.src}
           type="image/webp"
           media="(min-width: 768px)"
         />
-        <source
-          srcset="/src/assets/img/pc_main-visual.jpg"
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="/src/assets/img/sp_main-visual.webp"
-          type="image/webp"
-        />
+        <source srcset={ImgMainPc.src} media="(min-width: 768px)" />
+        <source srcset={ImgMainWebpSp.src} type="image/webp" />
         <img
-          src="/src/assets/img/sp_main-visual.jpg"
+          src={ImgMainSp.src}
           alt="コーヒーカップが並ぶ画像"
-          width="375"
-          height="340"
+          width={ImgMainSp.width}
+          height={ImgMainSp.height}
           decoding="async"
           loading="eager"
         />
@@ -68,16 +80,16 @@ const nav = [
         <div class="concept__imgWrap">
           <picture>
             <source
-              srcset="/src/assets/img/concept.webp"
+              srcset={ImgConceptWebp.src}
               type="image/webp"
               media="(min-width: 768px)"
             />
             <img
               class="concept__img"
-              src="/src/assets/img/concept.jpg"
+              src={ImgConcept.src}
               alt="コーヒーカップが並ぶ画像"
-              width="335"
-              height="339"
+              width={ImgConcept.width}
+              height={ImgConcept.height}
               decoding="async"
               loading="eager"
             />
@@ -103,13 +115,10 @@ const nav = [
             <div class="blog__linkInner">
               <div class="blog__imgWrap">
                 <picture>
-                  <source
-                    src="/src/assets/img/thumbnail01.webp"
-                    type="image/webp"
-                  />
+                  <source src={Imgthumbnail01Webp.src} type="image/webp" />
                   <img
                     class="blog__img"
-                    src="/src/assets/img/thumbnail01.jpg"
+                    src={Imgthumbnail01.src}
                     alt="キッチンカーの画像"
                     width="335"
                     height="172"
@@ -132,13 +141,10 @@ const nav = [
             <div class="blog__linkInner">
               <div class="blog__imgWrap">
                 <picture>
-                  <source
-                    src="/src/assets/img/thumbnail02.webp"
-                    type="image/webp"
-                  />
+                  <source src={Imgthumbnail02Webp.src} type="image/webp" />
                   <img
                     class="blog__img"
-                    src="/src/assets/img/thumbnail02.jpg"
+                    src={Imgthumbnail02.src}
                     alt="キッチンカーの画像"
                     width="335"
                     height="172"
@@ -161,13 +167,10 @@ const nav = [
             <div class="blog__linkInner">
               <div class="blog__imgWrap">
                 <picture>
-                  <source
-                    src="/src/assets/img/thumbnail03.webp"
-                    type="image/webp"
-                  />
+                  <source src={Imgthumbnail03Webp.src} type="image/webp" />
                   <img
                     class="blog__img"
-                    src="/src/assets/img/thumbnail03.jpg"
+                    src={Imgthumbnail03.src}
                     alt="キッチンカーの画像"
                     width="335"
                     height="172"
@@ -193,13 +196,10 @@ const nav = [
             <div class="blog__linkInner">
               <div class="blog__imgWrap">
                 <picture>
-                  <source
-                    src="/src/assets/img/thumbnail04.webp"
-                    type="image/webp"
-                  />
+                  <source src={Imgthumbnail04Webp.src} type="image/webp" />
                   <img
                     class="blog__img"
-                    src="/src/assets/img/thumbnail04.jpg"
+                    src={Imgthumbnail04.src}
                     alt="キッチンカーの画像"
                     width="335"
                     height="172"
@@ -224,13 +224,10 @@ const nav = [
             <div class="blog__linkInner">
               <div class="blog__imgWrap">
                 <picture>
-                  <source
-                    src="/src/assets/img/thumbnail05.webp"
-                    type="image/webp"
-                  />
+                  <source src={Imgthumbnail05Webp.src} type="image/webp" />
                   <img
                     class="blog__img"
-                    src="/src/assets/img/thumbnail05.jpg"
+                    src={Imgthumbnail05.src}
                     alt="キッチンカーの画像"
                     width="335"
                     height="172"
@@ -253,13 +250,10 @@ const nav = [
             <div class="blog__linkInner">
               <div class="blog__imgWrap">
                 <picture>
-                  <source
-                    src="/src/assets/img/thumbnail06.webp"
-                    type="image/webp"
-                  />
+                  <source src={Imgthumbnail06Webp.src} type="image/webp" />
                   <img
                     class="blog__img"
-                    src="/src/assets/img/thumbnail06.jpg"
+                    src={Imgthumbnail06.src}
                     alt="キッチンカーの画像"
                     width="335"
                     height="172"
